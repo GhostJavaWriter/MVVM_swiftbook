@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol TableViewCellViewModelType {
+protocol TableViewCellViewModelType: AnyObject {
     
     var name: String { get }
     var secondName: String { get }

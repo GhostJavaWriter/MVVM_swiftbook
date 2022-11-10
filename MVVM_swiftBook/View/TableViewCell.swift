@@ -9,7 +9,7 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
-    var tableViewCellViewModel: TableViewCellViewModelType? {
+    weak var tableViewCellViewModel: TableViewCellViewModelType? {
         willSet(tableViewCellModel) {
             nameLabel.text = tableViewCellModel?.name
             secondNameLabel.text = tableViewCellModel?.secondName

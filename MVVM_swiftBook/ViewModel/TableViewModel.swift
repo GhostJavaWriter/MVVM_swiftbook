@@ -1,5 +1,5 @@
 //
-//  ViewModel.swift
+//  TableViewModel.swift
 //  MVVM_swiftBook
 //
 //  Created by Bair Nadtsalov on 10.11.2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ViewModel: TableViewViewModelType {
+class TableViewModel: TableViewViewModelType {
     
     var profiles = [
         Profile(name: "Bair", secondName: "Nadtsalov", age: 32),
@@ -22,6 +22,11 @@ class ViewModel: TableViewViewModelType {
     func cellViewModel(forIndexPath indexPath: IndexPath) -> TableViewCellViewModelType? {
         let profile = profiles[indexPath.row]
         return TableViewCellViewModel(profile: profile)
+    }
+    
+    func detailViewModelForSelectedRow(at indexPath: IndexPath) -> DetailViewModelType? {
+        let profile = profiles[indexPath.row]
+        return DetailViewModel(profile: profile)
     }
 
 }

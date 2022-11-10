@@ -11,5 +11,6 @@ protocol TableViewViewModelType {
     
     func numberOfRows() -> Int
     func cellViewModel(forIndexPath indexPath: IndexPath) -> TableViewCellViewModelType?
+    func detailViewModelForSelectedRow(at indexPath: IndexPath) -> DetailViewModelType?
     
 }
