@@ -30,22 +30,20 @@ class ProfileViewController: UIViewController {
         return label
     }()
     
-    private var profile: Profile? {
+    var viewModel: ViewModel? {
         didSet {
-            guard let profile = profile else { return }
-            self.nameLabel.text = profile.name
-            self.secondNameLabel.text = profile.secondName
-            self.ageLabel.text = String(profile.age)
+            self.nameLabel.text = viewModel?.name
+            self.secondNameLabel.text = viewModel?.secondName
+            self.ageLabel.text = viewModel?.age
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
         configureSubViews()
-        
-        profile = Profile(name: "Bair", secondName: "Nadtsalov", age: 32)
+        viewModel = ViewModel()
     }
     
     private func configureSubViews() {
