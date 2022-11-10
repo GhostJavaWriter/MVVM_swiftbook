@@ -19,18 +19,15 @@ class ProfileViewController: UIViewController {
     }()
     
     let cellIdentifier = String(describing: TableViewCell.self)
-    var profiles: [Profile]?
+    
+    var viewModel: TableViewViewModelType?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
         view.addSubview(tableView)
-        profiles = [
-            Profile(name: "Bair", secondName: "Nadtsalov", age: 32),
-            Profile(name: "Bair2", secondName: "Nadtsalov", age: 33),
-            Profile(name: "Bair3", secondName: "Nadtsalov", age: 34),
-        ]
+        viewModel = ViewModel()
     }
 }
 
@@ -42,19 +39,17 @@ extension ProfileViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        guard let profiles = profiles else { return 1 }
-        return profiles.count
-        
+        return viewModel?.numberOfRows() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier,
                                                        for: indexPath) as? TableViewCell,
-              let profiles = profiles
+              let tableViewCellViewModel = viewModel?.cellViewModel(forIndexPath: indexPath)
         else { return UITableViewCell() }
         
-        cell.configureCell(with: profiles[indexPath.row])
+        cell.tableViewCellViewModel = tableViewCellViewModel
         
         return cell
     }

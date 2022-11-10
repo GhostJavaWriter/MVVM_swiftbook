@@ -16,6 +16,9 @@
 		DEAA151B291CAE90008BC151 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA151A291CAE90008BC151 /* Profile.swift */; };
 		DEAA151E291CB13F008BC151 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA151D291CB13F008BC151 /* ViewModel.swift */; };
 		DEAA1522291CB7C4008BC151 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA1521291CB7C4008BC151 /* TableViewCell.swift */; };
+		DEAA1526291CC4C9008BC151 /* TableViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA1525291CC4C9008BC151 /* TableViewModelType.swift */; };
+		DEAA1529291CC9B0008BC151 /* TableViewCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA1528291CC9B0008BC151 /* TableViewCellViewModelType.swift */; };
+		DEAA152B291CCAD3008BC151 /* TableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA152A291CCAD3008BC151 /* TableViewCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		DEAA151A291CAE90008BC151 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		DEAA151D291CB13F008BC151 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		DEAA1521291CB7C4008BC151 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		DEAA1525291CC4C9008BC151 /* TableViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModelType.swift; sourceTree = "<group>"; };
+		DEAA1528291CC9B0008BC151 /* TableViewCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModelType.swift; sourceTree = "<group>"; };
+		DEAA152A291CCAD3008BC151 /* TableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 			children = (
 				DEAA1504291CA8F7008BC151 /* AppDelegate.swift */,
 				DEAA1506291CA8F7008BC151 /* SceneDelegate.swift */,
+				DEAA1527291CC556008BC151 /* Protocols */,
 				DEAA151C291CB132008BC151 /* Model */,
 				DEAA1520291CB37D008BC151 /* View */,
 				DEAA151F291CB371008BC151 /* ViewModel */,
@@ -87,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				DEAA151D291CB13F008BC151 /* ViewModel.swift */,
+				DEAA152A291CCAD3008BC151 /* TableViewCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -98,6 +106,15 @@
 				DEAA1521291CB7C4008BC151 /* TableViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		DEAA1527291CC556008BC151 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DEAA1525291CC4C9008BC151 /* TableViewModelType.swift */,
+				DEAA1528291CC9B0008BC151 /* TableViewCellViewModelType.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,10 +188,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEAA1529291CC9B0008BC151 /* TableViewCellViewModelType.swift in Sources */,
 				DEAA151E291CB13F008BC151 /* ViewModel.swift in Sources */,
 				DEAA1509291CA8F7008BC151 /* ProfileViewController.swift in Sources */,
 				DEAA151B291CAE90008BC151 /* Profile.swift in Sources */,
 				DEAA1522291CB7C4008BC151 /* TableViewCell.swift in Sources */,
+				DEAA1526291CC4C9008BC151 /* TableViewModelType.swift in Sources */,
+				DEAA152B291CCAD3008BC151 /* TableViewCellViewModel.swift in Sources */,
 				DEAA1505291CA8F7008BC151 /* AppDelegate.swift in Sources */,
 				DEAA1507291CA8F7008BC151 /* SceneDelegate.swift in Sources */,
 			);

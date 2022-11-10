@@ -9,7 +9,13 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
-    var profile: Profile?
+    var tableViewCellViewModel: TableViewCellViewModelType? {
+        willSet(tableViewCellModel) {
+            nameLabel.text = tableViewCellModel?.name
+            secondNameLabel.text = tableViewCellModel?.secondName
+            ageLabel.text = tableViewCellModel?.age
+        }
+    }
     
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
@@ -54,12 +60,12 @@ class TableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureCell(with profile: Profile) {
-        
-        nameLabel.text = profile.name
-        secondNameLabel.text = profile.secondName
-        ageLabel.text = String(describing: profile.age)
-        
-    }
+//    func configureCell(with profile: Profile) {
+//
+//        nameLabel.text = profile.name
+//        secondNameLabel.text = profile.secondName
+//        ageLabel.text = String(describing: profile.age)
+//
+//    }
     
 }
