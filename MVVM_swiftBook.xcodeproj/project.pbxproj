@@ -22,6 +22,7 @@
 		DEAA152D291CDFDE008BC151 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA152C291CDFDE008BC151 /* DetailViewModel.swift */; };
 		DEAA152F291CDFF7008BC151 /* DetailViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA152E291CDFF7008BC151 /* DetailViewModelType.swift */; };
 		DEAA1531291CE203008BC151 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA1530291CE203008BC151 /* DetailViewController.swift */; };
+		DEAA1533291DFC7C008BC151 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA1532291DFC7C008BC151 /* Box.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		DEAA152C291CDFDE008BC151 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		DEAA152E291CDFF7008BC151 /* DetailViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelType.swift; sourceTree = "<group>"; };
 		DEAA1530291CE203008BC151 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DEAA1532291DFC7C008BC151 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			children = (
 				DEAA1504291CA8F7008BC151 /* AppDelegate.swift */,
 				DEAA1506291CA8F7008BC151 /* SceneDelegate.swift */,
+				DEAA1532291DFC7C008BC151 /* Box.swift */,
 				DEAA1527291CC556008BC151 /* Protocols */,
 				DEAA151C291CB132008BC151 /* Model */,
 				DEAA1520291CB37D008BC151 /* View */,
@@ -203,6 +206,7 @@
 				DEAA1531291CE203008BC151 /* DetailViewController.swift in Sources */,
 				DEAA152D291CDFDE008BC151 /* DetailViewModel.swift in Sources */,
 				DEAA151B291CAE90008BC151 /* Profile.swift in Sources */,
+				DEAA1533291DFC7C008BC151 /* Box.swift in Sources */,
 				DEAA1522291CB7C4008BC151 /* TableViewCell.swift in Sources */,
 				DEAA152F291CDFF7008BC151 /* DetailViewModelType.swift in Sources */,
 				DEAA1526291CC4C9008BC151 /* TableViewModelType.swift in Sources */,

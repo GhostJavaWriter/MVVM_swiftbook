@@ -9,7 +9,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    weak var detailViewModel: DetailViewModelType?
+    var detailViewModel: DetailViewModelType?
     
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
@@ -37,18 +37,34 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         configureLayout()
+        
+        detailViewModel?.age.bind { [weak self] in
+            guard let string = $0 else { return }
+            self?.ageLabel.text = string
+        }
+        
+        delay(delay: 4) { [weak self] in
+            self?.detailViewModel?.age.value = "some age"
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if let _detailViewModel = detailViewModel {
-            let profileConfig = _detailViewModel.getProfileConfig()
-            nameLabel.text = profileConfig.name
-        } else {
-            nameLabel.text = "Error occured"
+        guard let _detailViewModel = detailViewModel else {
+            nameLabel.text = "Error occured1"
+            return
+        }
+        let profileConfig = _detailViewModel.getProfileConfig()
+        
+        nameLabel.text = profileConfig.name
+    }
+    
+    private func delay(delay: Double, clouser: @escaping () -> ()) {
+        DispatchQueue.main.asyncAfter(wallDeadline: .now() + delay) {
+            clouser()
         }
     }
     

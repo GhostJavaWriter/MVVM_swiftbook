@@ -37,6 +37,7 @@ extension ProfileViewController: UITableViewDelegate {
         
         let viewController = DetailViewController()
         let detailViewModel = tableViewModel?.detailViewModelForSelectedRow(at: indexPath)
+        
         viewController.detailViewModel = detailViewModel
         
         present(viewController, animated: true)

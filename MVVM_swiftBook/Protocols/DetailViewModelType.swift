@@ -10,4 +10,5 @@ import Foundation
 protocol DetailViewModelType: AnyObject {
     
     func getProfileConfig() -> Profile
+    var age: Box<String?> { get }
 }
